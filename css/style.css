@@ -1,4 +1,5 @@
 /* GLOBAL */
+/* Setting mặc định khi đang ở light mode*/
 :root {
     --theme-color: #e40000;
     --primary-color: #fb811e;
@@ -20,10 +21,11 @@
     --bg-dark-color: #fff;
     --quote-text-color: #1d2c4c;
     --icon-gra-color: linear-gradient(75deg, #1c2e7b 10%, #e60264);
-    --shadow-color: rgb(0 0 0 / 3%);
-    --box-shadow: rgb(0 0 0 / 41%);
+    --shadow-color: rgba(0, 0, 0, 0.03);
+    --box-shadow: rgba(0, 0, 0, 0.41);
 }
 
+/* Setting khi chuyển sang dark mode */
 [data-theme="dark"] {
     --theme-color: #e40000;
     --primary-color: #fb811e;
@@ -86,6 +88,32 @@ h6 {
     font-family: 'Volkhov', serif;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-weight: 400;
+    line-height: 28px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+p {
+    margin: 0;
+    font-size: 17px;
+    line-height: 27px;
+}
+
 .btnStyle {
     color: #fff;
     font-size: 1rem;
@@ -115,9 +143,6 @@ h6 {
     color: var(--heading-color);
 }
 
-.container {
-    max-width: 1200px;
-}
 
 /* HEADER */
 .farmNav__header {
@@ -133,49 +158,23 @@ h6 {
     z-index: 999;
 }
 
-/* Tạo class "navigation-fixed" cho header khi scroll */
-header.navigation-fixed {
-    padding: 0px;
-    border-bottom: none;
-    z-index: 99;
-    background-color: var(--bg-color);
-    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
-    height: 70px;
-}
-
-.navigation-fixed .navbar {
-    box-shadow: none;
-    border-radius: 0px;
-    padding: 0;
-}
-
-.navigation-fixed .navbar-brand,
-.navigation-fixed .farmNav__menu {
-    color: var(--heading-color);
-}
-
-
 .navbar {
     padding: 0;
 }
 
 .navbar-brand {
-    font-size: 2rem;
+    font-size: 32px;
     color: var(--primary-color);
     padding: 0;
     position: relative;
     transition: all .5s;
 }
 
-.navbar-brand:hover {
-    color: var(--heading-color);
-}
-
 .navbar-brand i {
     font-size: 20px;
     position: absolute;
     left: 55px;
-    top: -7px;
+    top: -12px;
 }
 
 .farmNav_search {
@@ -198,6 +197,7 @@ header.navigation-fixed {
 }
 
 .farmNav_search input[type=search]:focus {
+    /* Mở rộng thanh search khi click vào */
     width: 200px;
     padding-left: 32px;
     color: #000;
@@ -235,6 +235,7 @@ header.navigation-fixed {
 }
 
 .farmNav__menu input:checked~.farmNav__dropDown ul {
+    /* Mở menu khi click vào thanh bar*/
     max-height: 400px;
 }
 
@@ -252,7 +253,21 @@ header.navigation-fixed {
     color: var(--primary-color);
 }
 
-/* END HEADER */
+/* Tạo class "nav-fixed" cho header khi scroll */
+header.nav-fixed {
+    padding: 0;
+    border-bottom: none;
+    background-color: var(--bg-color);
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.05);
+    height: 70px;
+    z-index: 99;
+}
+
+.nav-fixed .navbar-brand,
+.nav-fixed .farmNav__menu,
+.navbar-brand:hover {
+    color: var(--heading-color);
+}
 
 
 /* SLIDER */
@@ -288,6 +303,7 @@ header.navigation-fixed {
 
 .slider__image {
     background-size: cover;
+    background-position: top center;
     min-height: 100vh;
     position: relative;
 }
@@ -319,18 +335,13 @@ header.navigation-fixed {
     text-align: center;
     color: #fff;
     position: absolute;
-    right: 16px;
-    bottom: 25px;
+    right: 1em;
+    bottom: 40px;
     z-index: 1;
 }
 
 .silder__caption h4 {
     color: #fff;
-    font-size: 1.5rem;
-}
-
-.silder__caption p {
-    font-size: 17px;
 }
 
 .silder__caption h4 span {
@@ -372,16 +383,8 @@ header.navigation-fixed {
     outline: none;
 }
 
-/* END SLIDER */
-
 
 /* FEATURE */
-.feature p {
-    font-size: 17px;
-    line-height: 27px;
-    margin: 0;
-}
-
 .feature__content {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -420,8 +423,6 @@ header.navigation-fixed {
     color: var(--secondary-color);
 }
 
-/* END FEATURE */
-
 
 /* BACK TO TOP */
 .backToTop {
@@ -454,106 +455,9 @@ header.navigation-fixed {
     opacity: 1;
 }
 
-/* END BACK TO TOP */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* DARK THEME */
-/*-- toggle switch --*/
+/* DARK MODE */
+/*-- Điều chỉnh switch --*/
 .theme-switch-wrapper {
     display: flex;
     align-items: center;
@@ -574,9 +478,7 @@ header.navigation-fixed {
     display: none;
 }
 
-/*-- //toggle switch --*/
-/* //bootstrap */
-/*-- dark and light mode styling --*/
+/*-- Tạo style cho icon chuyển mode --*/
 .mode-container {
     width: 24px;
     height: 24px;
@@ -620,8 +522,8 @@ header.navigation-fixed {
     border-radius: 50%;
 }
 
-.navigation-fixed .gg-moon,
-.navigation-fixed .gg-moon:after {
+.nav-fixed .gg-moon,
+.nav-fixed .gg-moon:after {
     color: var(--heading-color);
 }
 
@@ -679,4 +581,234 @@ input:checked+.mode-container i.gg-sun {
 
 input:checked+.mode-container i.gg-moon {
     display: none;
+}
+
+
+/* RESPONSIVE */
+@media screen and (max-width: 1440px) {
+
+    /* SLIDER */
+    .slider__text h2 {
+        font-size: 100px;
+    }
+
+    .slider__intro h3 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    /* GLOBAL */
+    p {
+        line-height: 26px;
+    }
+
+    h4 {
+        font-size: calc(1.275rem + 0.3vw);
+    }
+}
+
+@media screen and (max-width: 1150px) {
+
+    /* SLIDER */
+    .slider__left {
+        left: 5em;
+    }
+
+    .slider__text h2 {
+        font-size: 90px;
+    }
+
+    .slider__intro h3 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+
+    .slider__intro p {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 991.98px) {
+
+    /* HEADER */
+    .farmNav__header {
+        height: auto;
+        padding: 17px 0;
+    }
+
+    header.nav-fixed {
+        height: auto;
+        padding: 14px 0;
+    }
+
+    /* SLIDER */
+    .slider__left {
+        left: 2em;
+    }
+
+    .slider__text h2 {
+        font-size: 80px;
+    }
+
+    .slider__intro h3 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+
+    /* FEATURE */
+    .feature .titleH5 {
+        font-size: 20px;
+    }
+
+    .feature .titleH3 {
+        font-size: 35px;
+        line-height: 45px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    /* FEATURE */
+    .feature__item {
+        padding: 1.5em;
+    }
+}
+
+@media screen and (max-width: 767.98px) {
+
+    /* HEADER */
+    .navbar .navbar-brand {
+        color: #fff;
+    }
+
+    .nav-fixed .navbar-brand {
+        color: var(--primary-color);
+    }
+
+    /* SLIDER */
+    .slider__left {
+        left: 0;
+        padding: 2em;
+    }
+
+    .slider__text {
+        background: var(--bg-color);
+        padding: 3em 2em 2em 4em;
+        border-radius: 8px;
+    }
+
+    /* FEATURE */
+    .feature .titleH5 {
+        font-size: 18px;
+    }
+
+    .feature .titleH3 {
+        font-size: 32px;
+        line-height: 42px;
+    }
+}
+
+@media screen and (max-width: 667px) {
+
+    /* FEATURE */
+    .feature .titleH3+p {
+        margin: 14px 0 26px;
+    }
+
+    .feature__item h4 a {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 568px) {
+
+    /* SLIDER */
+    .slider__text h2 {
+        font-size: 70px;
+    }
+
+    .slider__intro h3 {
+        font-size: 28px;
+        line-height: 38px;
+    }
+
+    .slider__intro p {
+        font-size: 16px;
+    }
+
+    /* FEATURE */
+    .feature .titleH3 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .feature .titleH3+p {
+        margin: 0 0 10px;
+    }
+
+    .feature__item h4 a {
+        margin-bottom: 7px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    /* HEADER */
+    .navbar .navbar-brand {
+        font-size: 28px;
+    }
+
+    /* SLIDER */
+    .slider__left {
+        padding: 1em;
+    }
+
+    .slider__text {
+        padding: 2.5em 2em 2em 2.5em;
+    }
+
+    .slider__text h2 {
+        font-size: 60px;
+    }
+
+    .slider__intro h3 {
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .slider__intro p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+
+    /* FEATURE */
+    .feature .titleH3+p {
+        font-size: 15px;
+    }
+
+    .feature__content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 384px) {
+
+    /* FEATURE */
+    .feature__item h4 a {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+
+    /* GLOBAL */
+    .container {
+        max-width: 1200px;
+    }
 }
