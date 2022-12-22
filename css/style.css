@@ -1,3 +1,83 @@
 body{
     font-family: 'Source Sans Pro', sans-serif;
 }
+:root {}
+.service-section {
+	background-color: #28a745;
+}
+.small-title{
+	color:#fb811e;
+}
+.title-style {
+	color:black;
+	font-size: 40px;
+    line-height: 50px;
+    font-weight: 600;
+}
+.title-bg-content {
+	position: absolute;
+	color: white;
+	font-weight: bold;
+	z-index: 0;
+	bottom: 50%;
+	left: 50%;
+	transform: translate(-50%,50%);
+	font-size: 14vw;
+	opacity: .15;
+}
+
+.card-header img {
+	width: 100%;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
+.card {
+	border-radius: 15px;
+}
+.label-style{
+	color: green;
+    display: inline-block;
+    background: rgb(0 159 77 / 16%);
+    padding: 5px 20px;
+    border-radius: 15px;
+    font-weight: 600;
+}
+.service-heading{
+    display: block;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 600;
+    color: black;
+    margin: 15px 0;
+}
+
+  .imginfo__box {
+	background-color:#fb811e;
+    position: absolute;
+    left: -85px;
+    bottom: 38px;
+    padding: 9px;
+    box-shadow: 30px 30px 30px rgb(0 0 0 / 20%);
+    min-width: 300px;
+    border-radius: 0 0 100px 0;
+    text-align: center;
+
+  }
+  .imginfo__box p {
+	font-size: 18px;
+	color: white	;
+  }
+  .imginfo__title {
+    font-size: 70px;
+    line-height: 80px;
+    color: #fff;
+    font-weight: 500;
+}
+.grids_info span {
+	font-size: 30px;
+	color:#fb811e;
+}
+.features15-para {
+	color: black;
+}
