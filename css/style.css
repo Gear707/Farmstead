@@ -112,6 +112,7 @@ p {
     margin: 0;
     font-size: 17px;
     line-height: 27px;
+    color: var(--font-color);
 }
 
 .btnStyle {
