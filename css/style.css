@@ -5,7 +5,7 @@ body,html{
     background: #fff;
 }
 
-body h1,h2,h3,h4,h5{
+h1,h2,h3,h4,h5{
     font-family: 'Volkhov', serif;
 }
 
@@ -135,6 +135,17 @@ figure img{
     background: url(https://wp.w3layouts.com/farmstead/wp-content/themes/farmstead/assets/images/bg1.jpg);
 }
 
+.carousel::before{
+    content: "";
+    background: rgb(10 10 10 / 52%);
+    position: absolute;
+    top: 0;
+    min-height: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
 .owl-carousel .owl-stage-outer{
     position: relative;
     overflow: hidden;
@@ -208,15 +219,21 @@ figure img{
     display: block;
 }
 
-.owl-dots .owl-dot span{
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span{
     background: #fb811e;
 }
+
+button:focus{
+    outline: none;
+}
+
 
 
 
 /* FOOTER */
 footer h3{
-    font-size: 25px;
+    font-size: 20px;
     line-height: 25px;
     margin-bottom: 30px;
     font-weight: 600;
@@ -259,13 +276,14 @@ footer h3{
 
 .footer_text{
     line-height: 24px;
+    font-size: 17px;
 }
 
 .footer_text a{
     color: #009f4d
 }
 
-.footer_text p .mt5 a{
+.footer_text p a{
     text-decoration: none;
 }
 
