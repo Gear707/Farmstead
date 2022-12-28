@@ -1,7 +1,7 @@
 body,html{
     font-family: 'Source Sans Pro', sans-serif; ;
     line-height: 1.15;
-    color: #707070;
+    color: var(--font-color);
     background: #fff;
 }
 
@@ -9,6 +9,14 @@ h1,h2,h3,h4,h5{
     font-family: 'Volkhov', serif;
 }
 
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
 * {
     margin: 0;
     padding: 0;
@@ -20,12 +28,6 @@ h1,h2,h3,h4,h5{
 
 /* gallery */
 
-h3.title_style{
-    font-size: 40px;
-    line-height: 50px;
-    font-weight: 600;
-    color: #060606;
-}
 
 .gallery_item{
     position: relative;
@@ -36,7 +38,7 @@ h3.title_style{
 }
 
 .gallery_item .small_title{
-    color: #fb811e;
+    color: var(--primary-color);
     font-size: 22px;
 }
 
@@ -44,13 +46,13 @@ h3.title_style{
     font-size: 40px;
     font-weight: 600;
     line-height: 50px;
-    color: #060606;
+    color: var(--heading-color);
 }
 
 .gallery_item p{
     font-size: 17px;
     line-height: 27px;
-    color: #707070;
+    color: vvar(--font-color);
 }
 
 .gallery_item .btn{
@@ -59,24 +61,27 @@ h3.title_style{
     text-transform: uppercase;
     padding: 12px 30px;
     font-weight: 600;
-    background-color: #fb811e;
+    background-color: var(--primary-color);
     border: none;
     color: #fff;
     border-radius: 30px;
     transition: all .25s ease-in-out;
 }
 
+
+
 .gallery .content{
     padding: 0;
 }
 
 .gallery_item .btn:hover{
-    background-color: #009f4d;
+    background-color:var(--secondary-color);
 }
 
 .gallery_item a{
     background: transparent;
 }
+
 
 .content figure{
     overflow: hidden;
@@ -131,11 +136,12 @@ figure img{
 
 /* Carousel */
 
-.carousel{
+.feedback{
     background: url(https://wp.w3layouts.com/farmstead/wp-content/themes/farmstead/assets/images/bg1.jpg);
+    position: relative;
 }
 
-.carousel::before{
+.feedback::before{
     content: "";
     background: rgb(10 10 10 / 52%);
     position: absolute;
@@ -203,7 +209,7 @@ figure img{
 
 .owl-carousel span.fa{
     font-size: 25px;
-    color: #fb811e;
+    color: var(--primary-color);
     font-weight: 600;
     display: inline-block;
 }
@@ -211,7 +217,7 @@ figure img{
 .owl-carousel blockquote{
     margin: 0 0 16px;
 }
-.owl-carousel blockquote p{
+.owl-carousel blockquote q{
     font-size: 22px;
     line-height: 34px;
     color: #fff;
@@ -221,7 +227,7 @@ figure img{
 
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span{
-    background: #fb811e;
+    background:var(--primary-color);
 }
 
 button:focus{
@@ -243,19 +249,19 @@ footer h3{
 }
 
 .footer_info a{
-   color: #707070;
+   color: var(--font-color);
    text-decoration: none;
 }
 
 .footer_info a:hover{
-    color: #fb811e;
+    color: var(--primary-color);
 }
 
 
 .footer_logo a.logo{
     position: relative;
     font-size: 32px;
-    color:#fb811e;
+    color:var(--primary-color);
     text-decoration: none;
     font-family: 'Volkhov', serif;
 }
@@ -278,7 +284,7 @@ footer h3{
 }
 
 .footer_text a{
-    color: #009f4d
+    color: var(--secondary-color);
 }
 
 .footer_text p a{
@@ -286,7 +292,7 @@ footer h3{
 }
 
 .footer_text a:hover{
-    color: #fb811e;
+    color: var(--primary-color);
 }
 
 .email_text{
@@ -297,7 +303,7 @@ footer h3{
     width: 80%;
     font-size: 16px;
     background: #f4f4f4;
-    color: #707070;
+    color: var(--font-color);
     outline: none;
     padding: 12px 20px;
     border: 1px solid #eee;
@@ -307,7 +313,7 @@ footer h3{
 .email_text button{
     width: 20%;
     color: white;
-    background: #009f4d;
+    background: var(--secondary-color);
     font-size: 16px;
     padding: 12px;
     border: none;
@@ -325,7 +331,7 @@ footer .icon li{
 }
 
 footer .icon a {
-    color: #009f4d;
+    color: var(--secondary-color);
     width: 35px;
     height: 35px;
     background: rgb(10 191 83 / 8%);
@@ -336,14 +342,14 @@ footer .icon a {
 }
 
 footer .icon a:hover{
-    color: #fb811e;
+    color: var(--primary-color);
     background: rgb(255 201 69 / 19%);
     box-shadow: 0px 4px 7px 0px rgb(10 10 10 / 24%);
 }
 
 
 footer .icon a{
-    color: #009f4d;
+    color: var(--secondary-color);
     font-size: 15px;
     line-height: 35px;
 
@@ -365,9 +371,63 @@ footer .backToTop{
     color: #fff;
     width: 40px;
     height: 40px;
-    background: #009f4d;
+    background: var(--secondary-color);
     border-radius: 4px;
 }
 footer span{
     display: none;
 }
+
+
+/* Responsive */
+
+@media screen and (max-width: 1200px){
+    p {
+        line-height: 26px;
+    }  
+} 
+
+/* Gallery */
+
+
+@media (min-width: 576px){
+    .gallery_item{
+        margin-top: 0.5rem !important;
+    }
+}
+
+@media (max-width: 768px){
+    h5.small-title {
+        font-size: 18px;        
+    }
+
+    .title-style {
+        font-size: 32px;
+        line-height: 42px;
+    }
+}
+
+@media (max-width: 991px){
+    h5.small-title {
+        font-size: 20px;
+    }
+
+    title-style {
+        font-size: 35px;
+        line-height: 45px;
+    }
+}
+
+
+/* Feedback */
+
+@media (max-width: 736px){
+    .feedback .testimonial .contact h3 {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+}
+
+
+

@@ -1,3 +1,4 @@
+
 (function(){
     // Back to Top - by CodyHouse.co
 	var backTop = document.getElementsByClassName('js-cd-top')[0],
