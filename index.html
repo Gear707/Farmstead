@@ -305,12 +305,7 @@
                                     <div class="col-md-9 pl-lg-5 mt-md-0 mt-4 text-md-left text-center">
                                         <span class="fa fa-quote-left"></span>
                                         <blockquote>
-                                            <q>
-                                                Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita
-                                                beatae laudantium Quas minima sunt natus tempore, maiores aliquid modi
-                                                felis sequi optio lacinia id ipsum non velit, culpa. voluptate rem ullam
-                                                dolore nisi est quasi, doloribus tempora. est elit. Non quae, fugiat ad
-                                                libero justo sed amet.
+                                            <q>Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita beatae laudantium Quas minima sunt natus tempore, maiores aliquid modi felis sequi optio lacinia id ipsum non velit, culpa. voluptate rem ullam dolore nisi est quasi, doloribus tempora. est elit. Non quae, fugiat ad libero justo sed amet.
                                             </q>
                                         </blockquote>
                                     </div>
@@ -332,12 +327,7 @@
                                     <div class="col-md-9 pl-lg-5 mt-md-0 mt-4 text-md-left text-center">
                                         <span class="fa fa-quote-left"></span>
                                         <blockquote>
-                                            <q>
-                                                Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita
-                                                beatae laudantium Quas minima sunt natus tempore, maiores aliquid modi
-                                                felis sequi optio lacinia id ipsum non velit, culpa. voluptate rem ullam
-                                                dolore nisi est quasi, doloribus tempora. est elit. Non quae, fugiat ad
-                                                libero justo sed amet.
+                                            <q>Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita beatae laudantium Quas minima sunt natus tempore, maiores aliquid modi felis sequi optio lacinia id ipsum non velit, culpa. voluptate rem ullam dolore nisi est quasi, doloribus tempora. est elit. Non quae, fugiat ad libero justo sed amet.
                                             </q>
                                         </blockquote>
                                     </div>
@@ -359,12 +349,7 @@
                                     <div class="col-md-9 pl-lg-5 mt-md-0 mt-4 text-md-left text-center">
                                         <span class="fa fa-quote-left"></span>
                                         <blockquote>
-                                            <q>
-                                                Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita
-                                                beatae laudantium Quas minima sunt natus tempore, maiores aliquid modi
-                                                felis sequi optio lacinia id ipsum non velit, culpa. voluptate rem ullam
-                                                dolore nisi est quasi, doloribus tempora. est elit. Non quae, fugiat ad
-                                                libero justo sed amet.
+                                            <q>Lorem ipsum dolor sit amet int consectetur adipisicing elit. Velita beatae laudantium Quas minima sunt natus tempore, maiores aliquid modi felis sequi optio lacinia id ipsum non velit, culpa. voluptate rem ullam dolore nisi est quasi, doloribus tempora. est elit. Non quae, fugiat ad libero justo sed amet.
                                             </q>
                                         </blockquote>
                                     </div>
@@ -505,21 +490,25 @@
     <script>
         $(".owlTestimonial").owlCarousel({
             loop: true,
-            margin: 10,
+            margin: 20,
             nav: false,
-            dots: true,
+            responsiveClass: true,
+            autoplay: false,
+            autoplayTimeout: 5000,
+            autoplaySpeed: 1000,
+            autoplayHoverPause: false,
             responsive: {
                 0: {
                     items: 1,
-                },
-                600: {
-                    items: 1,
+                    nav: false
                 },
                 1000: {
                     items: 1,
-                },
-            },
-        });
+                    nav: false,
+                    loop: false
+                }
+            }
+            });
     </script>
 
     <!-- FANCY BOX JS cho Gallery -->
