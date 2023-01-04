@@ -1,22 +1,35 @@
-body{
-    font-family: 'Source Sans Pro', sans-serif;
+body {
+  font-family: 'Source Sans Pro', sans-serif;
 }
-:root {}
+
+:root {
+  --theme-color: #e40000;
+  --primary-color: #fb811e;
+  --primary-light: #fcf1e7;
+  --primary-dark: #ffc945;
+  --secondary-color: #009f4d;
+  --font-color: #707070;
+  --bg-color: #fff;
+  --heading-color: #060606;
+  --footer-color: #060e1f;
+  --footer-cpy-color: #040a17;
+}
+
 .service-section {
-	background-color: #28a745;
+	background:var(--secondary-color);
 }
 .small-title{
-	color:#fb811e;
+	color:var(--primary-color);
 }
 .title-style {
-	color:black;
+	color:var(--heading-color);
 	font-size: 40px;
     line-height: 50px;
     font-weight: 600;
 }
 .title-bg-content {
 	position: absolute;
-	color: white;
+	color:var(--bg-color);
 	font-weight: bold;
 	z-index: 0;
 	bottom: 50%;
@@ -28,15 +41,21 @@ body{
 
 .card-header img {
 	width: 100%;
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
+  border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
 
+
+.detail h4 {
+  font-weight: 600;
+}
 .card {
 	border-radius: 15px;
+  border:none;
 }
 .label-style{
-	color: green;
+	color: var(--secondary-color);
     display: inline-block;
     background: rgb(0 159 77 / 16%);
     padding: 5px 20px;
@@ -48,36 +67,69 @@ body{
     font-size: 24px;
     line-height: 30px;
     font-weight: 600;
-    color: black;
+    color:var(--heading-color);
     margin: 15px 0;
 }
 
   .imginfo__box {
-	background-color:#fb811e;
+	background:var(--primary-color);
     position: absolute;
     left: -85px;
     bottom: 38px;
-    padding: 9px;
+    padding: 25px;
     box-shadow: 30px 30px 30px rgb(0 0 0 / 20%);
-    min-width: 300px;
+    min-width: 280px;
     border-radius: 0 0 100px 0;
     text-align: center;
 
   }
+  .img-fluid  {
+    border-radius: 35px;
+  }
   .imginfo__box p {
 	font-size: 18px;
-	color: white	;
+	color: var(--bg-color);
+  border-radius: 10px;
   }
   .imginfo__title {
     font-size: 70px;
     line-height: 80px;
-    color: #fff;
-    font-weight: 500;
+    color:var(--bg-color);
+    font-weight: 600;
+    margin-bottom: 0;
 }
 .grids_info span {
 	font-size: 30px;
-	color:#fb811e;
+	color:var(--primary-color);
 }
 .features15-para {
-	color: black;
+	color: var(--heading-color);
+  
+}
+.features15-para h4{
+  font-weight: 600;
+}
+
+
+
+
+@media screen and (max-width: 991px) {
+  .title-style {
+    font-size: 35px;
+  }
+
+  
+}
+
+@media screen and (max-width: 768px) {
+  .title-style {
+    font-size: 32px;
+  }
+}
+
+
+@media screen and (max-width: 568px) {
+  .title-style {
+    font-size: 30px;
+  }
 }
