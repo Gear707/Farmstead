@@ -684,7 +684,7 @@ input:checked+.mode-container i.gg-moon {
 /* End Why choose us */
 
 
-/* Home page services */
+/* Main products */
 .features15-para h4 {
     font-size: 22px;
     line-height: 25px;
@@ -715,7 +715,7 @@ input:checked+.mode-container i.gg-moon {
     border: 1px solid var(--border-color-light);
     background: var(--bg-color);
 }
-/* End home page services */
+/* End Main products */
 
 
 /* Gallery */
