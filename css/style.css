@@ -1212,6 +1212,11 @@ footer span {
         font-size: 35px;
     }
 
+    .service-section .small-title,
+    .w3l-servicesblock .small-title {
+        font-size: 20px;
+    }
+
     /* Gallery */
     .gallery_item .small-title {
         font-size: 20px;
@@ -1281,6 +1286,11 @@ footer span {
     .service-section .title-style,
     .w3l-servicesblock .title-style {
         font-size: 32px;
+    }
+
+    .service-section .small-title,
+    .w3l-servicesblock .small-title {
+        font-size: 18px;
     }
 
     /* Gallery */
